@@ -12,8 +12,8 @@ jobs:
 
       - name: Run a one-line script
         run: |
-          cat hello > hello
-          cat -test- > test
+          echo hello > hello
+          echo new-test > test
 
       - name: Create pull request
         uses: weiiwang01/create-pull-request@main
