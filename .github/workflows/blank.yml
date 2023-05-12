@@ -2,6 +2,10 @@ name: Test
 
 on:
   workflow_dispatch:
+    inputs:
+      branch-name:
+        type: string
+        default: test-branch
 
 jobs:
   test:
