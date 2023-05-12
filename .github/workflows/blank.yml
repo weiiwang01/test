@@ -17,7 +17,7 @@ jobs:
           echo new-test > test
 
       - name: Create pull request
-        uses: weiiwang01/create-pull-request@main
+        uses: canonical/create-pull-request@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Test commit message
