@@ -25,7 +25,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Test commit message
-          branch-name: test-branch
+          branch-name: ${{ github.event.inputs.branch-name }}
           title: Test pull request
           body: Test pull request body
           upsert: true
