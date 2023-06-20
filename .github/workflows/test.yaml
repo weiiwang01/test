@@ -1,0 +1,11 @@
+name: Test
+on: 
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: lxd init --auto
+      - run: lxc remote add craft-com.ubuntu.cloud-buildd https://cloud-images.ubuntu.com/buildd/releases --protocol=simplestreams
+      - run: lxc launch craft-com.ubuntu.cloud-buildd:813d5578da52c751491d776f4100725086f8d8fadd81ca5af00894aef9c45739 test
