@@ -16,3 +16,34 @@ jobs:
           cat indico/indico.tar | sudo microk8s ctr image import -
       - run: |
           sudo /snap/microk8s/current/bin/ctr -a /var/snap/microk8s/common/run/containerd.sock -n k8s.io image ls
+      - run: |
+          cat << EOF > indico.yaml
+          apiVersion: apps/v1
+          kind: Deployment
+          metadata:
+            name: indico-deployment
+            labels:
+              app: indico
+          spec:
+            selector:
+              matchLabels:
+                app: indico
+            template:
+              metadata:
+                labels:
+                  app: indico
+              spec:
+                containers:
+                - name: indico
+                  image: indico:latest
+                  imagePullPolicy: IfNotPresent
+                  ports:
+                  - containerPort: 80
+          EOF
+          sudo microk8s kubectl apply -f indico.yaml
+      - run: |
+          while :; do
+            sudo microk8s kubectl get pods
+            sleep 1
+          done
+
