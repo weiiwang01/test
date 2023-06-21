@@ -13,7 +13,7 @@ jobs:
       - run: sudo snap install microk8s --classic
       - run: sudo microk8s status --wait-ready
       - run: |
-          cat indico/indico.tar | sudo microk8s ctr image import -
+          sudo microk8s ctr image import ./indico/indico.tar
       - run: |
           sudo /snap/microk8s/current/bin/ctr -a /var/snap/microk8s/common/run/containerd.sock -n k8s.io image ls
       - run: |
