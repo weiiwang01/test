@@ -6,8 +6,13 @@ jobs:
   test:
     runs-on: ubuntu-20.04
     steps:
-      - run: sudo lxd init --auto
-      - run: sudo lxc remote add craft-com.ubuntu.cloud-buildd https://cloud-images.ubuntu.com/buildd/releases --protocol=simplestreams
+      - name: Setup operator environment
+        uses: charmed-kubernetes/actions-operator@main
+        with:
+          provider: microk8s
       - run: |
-          sudo lxc image list craft-com.ubuntu.cloud-buildd:
-      - run: sudo lxc launch craft-com.ubuntu.cloud-buildd:5de93bcc5cddf2ede3e74f88c313deb056eab006dd131618a5d412dc4a5e5534 test
+          curl https://github.com/canonical/indico-operator/suites/13754321764/artifacts/762042400 -L -o indico.tar
+      - run: |
+          cat indico.tar | sudo microk8s ctr image import -
+      - run: |
+          sudo /snap/microk8s/current/bin/ctr -a /var/snap/microk8s/common/run/containerd.sock -n k8s.io image ls
