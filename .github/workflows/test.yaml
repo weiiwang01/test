@@ -18,32 +18,20 @@ jobs:
           sudo /snap/microk8s/current/bin/ctr -a /var/snap/microk8s/common/run/containerd.sock -n k8s.io image ls
       - run: |
           cat << EOF > indico.yaml
-          apiVersion: apps/v1
-          kind: Deployment
+          apiVersion: v1
+          kind: Pod
           metadata:
-            name: indico-deployment
-            labels:
-              app: indico
+            name: indico
           spec:
-            selector:
-              matchLabels:
-                app: indico
-            template:
-              metadata:
-                labels:
-                  app: indico
-              spec:
-                containers:
-                - name: indico
-                  image: indico:latest
-                  imagePullPolicy: IfNotPresent
-                  ports:
-                  - containerPort: 80
+            containers:
+              - name: indico
+                image: indico:latest
+                imagePullPolicy: IfNotPresent
+                ports:
+                - containerPort: 80
           EOF
           sudo microk8s kubectl apply -f indico.yaml
       - run: |
-          while :; do
-            sudo microk8s kubectl get pods
-            sleep 1
-          done
-
+          sleep 20
+          sudo microk8s kubectl get pods
+          sudo microk8s kubectl get pod indico -o yaml
