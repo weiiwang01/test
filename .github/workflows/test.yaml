@@ -6,32 +6,4 @@ jobs:
   test:
     runs-on: ubuntu-20.04
     steps:
-      - env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh run download 5331876766 -R canonical/indico-operator
-      - run: ls -lah indico
-      - run: sudo snap install microk8s --classic
-      - run: sudo microk8s status --wait-ready
-      - run: |
-          sudo microk8s ctr image import ./indico/indico.tar
-      - run: |
-          sudo /snap/microk8s/current/bin/ctr -a /var/snap/microk8s/common/run/containerd.sock -n k8s.io image ls
-      - run: |
-          cat << EOF > indico.yaml
-          apiVersion: v1
-          kind: Pod
-          metadata:
-            name: indico
-          spec:
-            containers:
-              - name: indico
-                image: indico:latest
-                imagePullPolicy: IfNotPresent
-                ports:
-                - containerPort: 80
-          EOF
-          sudo microk8s kubectl apply -f indico.yaml
-      - run: |
-          sleep 20
-          sudo microk8s kubectl get pods
-          sudo microk8s kubectl get pod indico -o yaml
+      - run: cat $GITHUB_EVENT_PATH
