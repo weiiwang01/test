@@ -1,6 +1,6 @@
 name: Test create-pull-request
 on:
-  workflow_call:
+  workflow_dispatch:
 
 jobs:
   update-lib:
