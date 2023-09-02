@@ -1,6 +1,6 @@
 name: Test create-pull-request
 on:
-  workflow_call:
+  workflow_dispatch:
 
 jobs:
   update-lib:
@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.6.0
       - name: Update
-        run: echo foobar > foobar
+        run: echo foobar > dir/foobar
       - name: Create pull request
         uses: canonical/create-pull-request@main
         with:
