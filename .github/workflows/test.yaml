@@ -7,4 +7,7 @@ jobs:
   test:
     runs-on: ubuntu-24.04
     steps:
-      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz | wc -c
+      - run: sudo lxd init --auto
+      - run: sudo lxc launch ubuntu:24.04 test
+      - run: sleep 10
+      - run: sudo lxc exec test -- curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz | wc -c
