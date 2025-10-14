@@ -7,4 +7,4 @@ jobs:
   test:
     runs-on: ubuntu-24.04
     steps:
-      - run: curl -x http://localhost:18080 https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz | wc -c
+      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz | wc -c
