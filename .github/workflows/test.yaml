@@ -7,6 +7,13 @@ jobs:
   test:
     runs-on: ubuntu-24.04
     steps:
-      - uses: canonical/setup-lxd@main
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
