@@ -7,13 +7,73 @@ jobs:
   test:
     runs-on: ubuntu-24.04
     steps:
-      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: |
+          import urllib.request
+          urllib.request.urlretrieve(
+              "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+              "./libiconv-1.18.tar.gz"
+          )
+        shell: python
+      - run: |
+          import urllib.request
+          urllib.request.urlretrieve(
+              "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+              "./libiconv-1.18.tar.gz"
+          )
+        shell: python
+      - run: |
+          import urllib.request
+          urllib.request.urlretrieve(
+              "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+              "./libiconv-1.18.tar.gz"
+          )
+        shell: python
+      - run: |
+          import urllib.request
+          urllib.request.urlretrieve(
+              "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+              "./libiconv-1.18.tar.gz"
+          )
+        shell: python
+      - run: |
+          import urllib.request
+          urllib.request.urlretrieve(
+              "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+              "./libiconv-1.18.tar.gz"
+          )
+        shell: python
+      - run: |
+          import urllib.request
+          urllib.request.urlretrieve(
+              "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+              "./libiconv-1.18.tar.gz"
+          )
+        shell: python
+      - run: |
+          import urllib.request
+          urllib.request.urlretrieve(
+              "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+              "./libiconv-1.18.tar.gz"
+          )
+        shell: python
+      - run: |
+          import urllib.request
+          urllib.request.urlretrieve(
+              "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+              "./libiconv-1.18.tar.gz"
+          )
+        shell: python
+      - run: |
+          import urllib.request
+          urllib.request.urlretrieve(
+              "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+              "./libiconv-1.18.tar.gz"
+          )
+        shell: python
+      - run: |
+          import urllib.request
+          urllib.request.urlretrieve(
+              "https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz",
+              "./libiconv-1.18.tar.gz"
+          )
+        shell: python
