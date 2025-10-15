@@ -7,13 +7,13 @@ jobs:
   test:
     runs-on: ubuntu-24.04
     steps:
-      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
-      - run: curl https://ftpmirror.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
+      - run: curl https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz -o /dev/null
